@@ -1,9 +1,9 @@
 // config.ts
-import {defineString} from "firebase-functions/params";
+import {defineString, defineInt} from "firebase-functions/params";
 
 // Define parameters for your functions
-export const minInstancesConfig = defineString("HELLO_WORLD_MININSTANCES", {
-  default: "2",
+export const minInstancesConfig = defineInt("HELLO_WORLD_MININSTANCES", {
+  default: 2,
   description: "Minimum instances for the function",
 });
 

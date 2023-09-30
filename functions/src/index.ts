@@ -1,4 +1,3 @@
-// index.ts
 import * as functions from "firebase-functions";
 import * as express from "express";
 import {minInstancesConfig, welcomeMessage} from "./config";
@@ -12,5 +11,5 @@ app.get("/", (req, res) => {
   res.status(200).send(`${message} Minimum Instances: ${minInstances}`);
 });
 
-// Export the Express.js app as a Firebase function
-exports.app = functions.https.onRequest(app);
+// Export the Express.js app as a Firebase function with a different name
+export const myApp = functions.https.onRequest(app);
